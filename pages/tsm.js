@@ -8,7 +8,6 @@ export default function Home() {
       <Head>
         <title>Crosshair</title>
         <meta name="description" content="Cross hair website for Valorant" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -36,13 +35,13 @@ export default function Home() {
              </div>
           </div>
           <div className = {styles.gridBox}>
-            <h3>Wardell</h3>
+            <h3>Rossy</h3>
             <div className = {styles.square}>
             
              </div>
           </div>
           <div className = {styles.gridBox}>
-            <h3>Tempest</h3>
+            <h3>Corey</h3>
             <div className = {styles.square}>
              
            </div>
