@@ -44,7 +44,7 @@ footer .footerContent{
   max-width: 300px;
   max-height:500px;
   margin:auto;
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
 
 }

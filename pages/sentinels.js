@@ -17,31 +17,46 @@ export default function Home() {
 
         <div className = {styles.gridContainer}>
           <div className = {styles.gridBox}>
+            <div className = {styles.gridBoxTop}>
             <h3>Tenz</h3>
+            <a>Copy</a>
+            </div>
             <div className = {styles.square}>
              
              </div>
           </div>
           <div className = {styles.gridBox}>
-           <h3>Kenpaki</h3>
+          <div className = {styles.gridBoxTop}>
+            <h3>Kanpeki</h3>
+            <a>Copy</a>
+            </div>
            <div className = {styles.square}>
            </div>
 
           </div>
           <div className = {styles.gridBox}>
+          <div className = {styles.gridBoxTop}>
             <h3>Shazham</h3>
+            <a>Copy</a>
+            </div>
             <div className = {styles.square}>
              
              </div>
           </div>
           <div className = {styles.gridBox}>
+          <div className = {styles.gridBoxTop}>
             <h3>Sick</h3>
+            <a>Copy</a>
+            </div>
             <div className = {styles.square}>
              
              </div>
           </div>
           <div className = {styles.gridBox}>
+          <div className = {styles.gridBoxTop}>
             <h3>Dapr</h3>
+            <a>Copy</a>
+            </div>
             <div className = {styles.square}>
              
            </div>

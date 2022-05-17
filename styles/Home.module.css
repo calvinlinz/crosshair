@@ -11,24 +11,37 @@
 .gridContainer{
   margin:auto;
   display: flex;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: space-between;
-  align-items: center;
-
+  align-items: center;  
 }
 
 .gridBox {
+  border: 1px solid black;
+  border-radius:2%;
   flex :0 20%;
-  padding:10px;
+  margin:10px 10px;
 }
-.gridBox h3{
+.gridBoxTop h3{
   text-align: center;
   vertical-align: text-top;
+  padding:0 10px;
+}
+
+.gridBoxTop{
+  background :#f2f2f2;
+  border-radius:5%;
+  flex:0 70%;
+  display: flex;
+  justify-content:space-between;
+}
+.gridBoxTop a{
+  padding:22px 10px;
+  color:blue;
 }
 .square{
   background-color:lightgrey;
-  border: 1px solid black;
-  border-radius: 2%;
+  border-bottom-left-radius: 2%;
+  border-bottom-right-radius: 2%;
   height:200px;
 }
 

@@ -12,36 +12,51 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className = {styles.header}>
-            <h1> TSM </h1>
+            <h1> Sentinels </h1>
         </div>
 
         <div className = {styles.gridContainer}>
           <div className = {styles.gridBox}>
-            <h3>gMd</h3>
+            <div className = {styles.gridBoxTop}>
+            <h3>Rossy</h3>
+            <a>Copy</a>
+            </div>
             <div className = {styles.square}>
              
              </div>
           </div>
           <div className = {styles.gridBox}>
-           <h3>seven</h3>
+          <div className = {styles.gridBoxTop}>
+            <h3>seven</h3>
+            <a>Copy</a>
+            </div>
            <div className = {styles.square}>
            </div>
 
           </div>
           <div className = {styles.gridBox}>
-            <h3>Subroza</h3>
+          <div className = {styles.gridBoxTop}>
+            <h3>gMd</h3>
+            <a>Copy</a>
+            </div>
             <div className = {styles.square}>
              
              </div>
           </div>
           <div className = {styles.gridBox}>
-            <h3>Rossy</h3>
+          <div className = {styles.gridBoxTop}>
+            <h3>Subroza</h3>
+            <a>Copy</a>
+            </div>
             <div className = {styles.square}>
-            
+             
              </div>
           </div>
           <div className = {styles.gridBox}>
+          <div className = {styles.gridBoxTop}>
             <h3>Corey</h3>
+            <a>Copy</a>
+            </div>
             <div className = {styles.square}>
              
            </div>
