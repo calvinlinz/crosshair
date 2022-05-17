@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className = "page">
+    <div className="page">
       <Head>
         <title>Crosshair</title>
         <meta name="description" content="Cross hair website for Valorant" />
@@ -12,11 +12,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div>
-          <h1>Crosshair Website</h1>
+        <div className = {styles.header}>
+            <h1> Create </h1>
         </div>
       </main>
- 
+
 
     </div>
   )
