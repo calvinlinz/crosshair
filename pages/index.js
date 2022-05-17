@@ -12,8 +12,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div>
+        <div className = {styles.header}>
           <h1>Crosshair Website</h1>
+          <p>Welcome to my crosshair website for Valorant</p>
         </div>
       </main>
  

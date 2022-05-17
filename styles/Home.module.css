@@ -2,3 +2,41 @@
 .container {
   padding: 8px;
 }
+
+.header {
+  text-align:center;
+}
+
+
+.gridContainer{
+  margin:auto;
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.gridBox {
+  flex :0 20%;
+  padding:10px;
+}
+.gridBox h3{
+  text-align: center;
+  vertical-align: text-top;
+}
+.square{
+  background-color:lightgrey;
+  border: 2px solid black;
+
+  height:200px;
+}
+
+@media (max-width: 1024px) {
+  .gridContainer {
+    flex-direction: column;
+  }
+  .gridContainer .gridBox {
+    width: 40%;
+  }
+}

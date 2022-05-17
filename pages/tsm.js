@@ -12,9 +12,43 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>This will be TSM</h1>
-      </main>
+        <div className = {styles.header}>
+            <h1> TSM </h1>
+        </div>
 
+        <div className = {styles.gridContainer}>
+          <div className = {styles.gridBox}>
+            <h3>gMd</h3>
+            <div className = {styles.square}>
+             
+             </div>
+          </div>
+          <div className = {styles.gridBox}>
+           <h3>seven</h3>
+           <div className = {styles.square}>
+           </div>
+
+          </div>
+          <div className = {styles.gridBox}>
+            <h3>Subroza</h3>
+            <div className = {styles.square}>
+             
+             </div>
+          </div>
+          <div className = {styles.gridBox}>
+            <h3>Wardell</h3>
+            <div className = {styles.square}>
+            
+             </div>
+          </div>
+          <div className = {styles.gridBox}>
+            <h3>Tempest</h3>
+            <div className = {styles.square}>
+             
+           </div>
+          </div>
+        </div>
+      </main>
      
     </div>
   )
