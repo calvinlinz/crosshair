@@ -46,11 +46,21 @@
   height:200px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .gridContainer {
-    flex-direction: column;
+    flex-direction:column;
+    flex-wrap:wrap;
   }
   .gridContainer .gridBox {
     width: 40%;
   }
+}
+  @media (max-width: 720px) {
+    .gridContainer {
+      flex-direction:column;
+      flex-wrap:wrap;
+    }
+    .gridContainer .gridBox {
+      width: 50%;
+    }
 }
