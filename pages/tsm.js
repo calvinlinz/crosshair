@@ -11,59 +11,54 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className = {styles.header}>
-            <h1> Sentinels </h1>
+        <div className={styles.header}>
+          <h1> TSM </h1>
         </div>
+        <div className={styles.gridContainer}>
+          <div className={styles.gridBox}>
+            <div className={styles.gridBoxTop}>
+              <h3>Rossy</h3>
+              <button onClick={() => navigator.clipboard.writeText("Test")}>Copy</button>
+            </div>
+            <div className={styles.square}>
+            </div>
+          </div>
+          <div className={styles.gridBox}>
+            <div className={styles.gridBoxTop}>
+              <h3>seven</h3>
+              <button onClick={() => navigator.clipboard.writeText("Test")}>Copy</button>
+            </div>
+            <div className={styles.square}>
+            </div>
+          </div>
+          <div className={styles.gridBox}>
+            <div className={styles.gridBoxTop}>
+              <h3>gMd</h3>
+              <button onClick={() => navigator.clipboard.writeText("Test")}>Copy</button>
+            </div>
+            <div className={styles.square}>
+            </div>
+          </div>
+          <div className={styles.gridBox}>
+            <div className={styles.gridBoxTop}>
+              <h3>Subroza</h3>
+              <button onClick={() => navigator.clipboard.writeText("Test")}>Copy</button>
+            </div>
+            <div className={styles.square}>
 
-        <div className = {styles.gridContainer}>
-          <div className = {styles.gridBox}>
-            <div className = {styles.gridBoxTop}>
-            <h3>Rossy</h3>
-            <a>Copy</a>
             </div>
-            <div className = {styles.square}>
-             
-             </div>
           </div>
-          <div className = {styles.gridBox}>
-          <div className = {styles.gridBoxTop}>
-            <h3>seven</h3>
-            <a>Copy</a>
+          <div className={styles.gridBox}>
+            <div className={styles.gridBoxTop}>
+              <h3>Corey</h3>
+              <button onClick={() => navigator.clipboard.writeText("Test")}>Copy</button>
             </div>
-           <div className = {styles.square}>
-           </div>
-
-          </div>
-          <div className = {styles.gridBox}>
-          <div className = {styles.gridBoxTop}>
-            <h3>gMd</h3>
-            <a>Copy</a>
+            <div className={styles.square}>
             </div>
-            <div className = {styles.square}>
-             
-             </div>
-          </div>
-          <div className = {styles.gridBox}>
-          <div className = {styles.gridBoxTop}>
-            <h3>Subroza</h3>
-            <a>Copy</a>
-            </div>
-            <div className = {styles.square}>
-             
-             </div>
-          </div>
-          <div className = {styles.gridBox}>
-          <div className = {styles.gridBoxTop}>
-            <h3>Corey</h3>
-            <a>Copy</a>
-            </div>
-            <div className = {styles.square}>
-             
-           </div>
           </div>
         </div>
       </main>
-     
+
     </div>
   )
 }

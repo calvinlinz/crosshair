@@ -35,10 +35,25 @@
   display: flex;
   justify-content:space-between;
 }
-.gridBoxTop a{
-  padding:22px 10px;
-  color:blue;
+.gridBoxTop button{
+  color:white;
+  font-family:"Roboto Condensed";
+  font-size:1rem;
+  margin:17px 10px;
+  padding:5px 10px;
+  border-radius: 8%;
+  border: 0px;
+  background-color:#5767f5;
 }
+
+.gridBoxTop button:hover{
+  background-color:#4052f7;
+  cursor:pointer;
+}
+.gridBoxTop button:active{
+  background-color:#3246fa;
+}
+
 .square{
   background-color:lightgrey;
   border-bottom-left-radius: 2%;
