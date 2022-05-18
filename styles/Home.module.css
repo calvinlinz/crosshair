@@ -1,81 +1,81 @@
-
 .container {
-  padding: 8px;
-}
-
+    padding: 8px;
+  }
+  
 .header {
-  margin:80px auto 80px;
-  text-align:center;
+    margin:80px auto 80px;
+    text-align:center;
 }
 
 .gridContainer{
-  margin:auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;  
-}
-
-.gridBox {
-  border-radius:2%;
-  flex :0 20%;
-  margin:10px 10px;
-  box-shadow:0px 0px 10px 5px rgb(206, 206, 206);
-}
-.gridBoxTop h3{
-  text-align: center;
-  vertical-align: text-top;
-  padding:0 10px;
-}
-
-.gridBoxTop{
-  background :#f2f2f2;
-  border-radius:5%;
-  flex:0 70%;
-  display: flex;
-  justify-content:space-between;
-}
-.gridBoxTop button{
-  color:white;
-  font-family:"Roboto Condensed";
-  font-size:1rem;
-  margin:17px 10px;
-  padding:5px 10px;
-  border-radius: 8%;
-  border: 0px;
-  background-color:#5767f5;
-}
-
-.gridBoxTop button:hover{
-  background-color:#4052f7;
-  cursor:pointer;
-}
-.gridBoxTop button:active{
-  background-color:#3246fa;
-}
-
-.square{
-  background-color:rgb(139, 139, 139);
-  border-bottom-left-radius: 2%;
-  border-bottom-right-radius: 2%;
-  height:200px;
-}
-
-@media (max-width: 1200px) {
-  .gridContainer {
-    flex-direction:row;
-    flex-wrap:wrap;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
     justify-content: center;
   }
-  .gridContainer .gridBox {
-    min-width: 40%;
+  
+  .gridBox {
+    border-radius:2%;
+    width:270px;
+    
+    flex :1;
+    margin:10px 10px;
+    box-shadow:0px 0px 10px 5px rgb(206, 206, 206);
   }
-}
-  @media (max-width: 720px) {
+  .gridBoxTop h3{
+    text-align: center;
+    vertical-align:text-bottom;
+    padding:10px 10px;
+    font-size:1rem;
+  }
+  
+  .gridBoxTop{
+    background :#f2f2f2;
+    border-radius:5%;
+    flex:0 70%;
+    display: flex;
+    justify-content:space-between;
+  }
+  .gridBoxTop button{
+    color:white;
+    font-family:"Roboto Condensed";
+    font-size:1rem;
+    margin:17px 10px;
+    padding:5px 10px;
+    border-radius: 8%;
+    border: 0px;
+    background-color:#5767f5;
+  }
+  
+  .gridBoxTop button:hover{
+    background-color:#4052f7;
+    cursor:pointer;
+  }
+  .gridBoxTop button:active{
+    background-color:#3246fa;
+  }
+  
+  .square{
+    background-color:rgb(139, 139, 139);
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+    height:200px;
+  }
+  
+  @media (max-width: 1200px) {
     .gridContainer {
-      flex-direction:column;
+      flex-direction:row;
       flex-wrap:wrap;
+      justify-content: center;
     }
     .gridContainer .gridBox {
-      width: 80%;
+      min-width: 40%;
     }
-}
+  }
+    @media (max-width: 720px) {
+      .gridContainer {
+        flex-direction:column;
+        flex-wrap:wrap;
+      }
+    
+  }

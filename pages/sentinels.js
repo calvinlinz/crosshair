@@ -1,18 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Team.module.css";
 
-var data = require("../crosshairs.json");
+const data = require("../crosshairs.json");
 
-
-for(var i =0; i < data.length; i++){
-  var obj = data[i];
-  if(obj.player_info.team == "Sentinels"){
-    console.log(`name:  ${obj.player_info.name}, Team: ${obj.player_info.team}`);
+export const getStaticProps = async() =>{
+  return {
+    props: {Crosshairs:data}
   }
 }
 
-export default function Home() {
+
+export default function Home({Crosshairs}) {
   return (
     <div className="page">
       <Head>
@@ -24,7 +23,6 @@ export default function Home() {
         <div className={styles.header}>
           <h1> Sentinels </h1>
         </div>
-
         <div className={styles.gridContainer}>
           <div className={styles.gridBox}>
             <div className={styles.gridBoxTop}>

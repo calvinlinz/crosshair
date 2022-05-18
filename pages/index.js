@@ -4,11 +4,6 @@ import styles from '../styles/Home.module.css'
 
 const data = require("../crosshairs.json");
 
-for(var i =0; i < data.length; i++){
-  var obj = data[i];
-    console.log(`name:  ${obj.player_info.name}, Team: ${obj.player_info.team}`);
-  }
-
 export const getStaticProps = async() =>{
   return {
     props: {Crosshairs:data}
@@ -29,14 +24,24 @@ export default function Home({Crosshairs}) {
         <div className = {styles.header}>
           <h1>Crosshair Website</h1>
           <p>Welcome to my crosshair website for Valorant</p>
-          {Crosshairs.map(Crosshair => (
+          </div>
+          <div className={styles.gridContainer}>
+            {Crosshairs.map(Crosshair => (  
             <div key={Crosshair.player_info.name}>
-              <a>
-                <h3>{`Name: ${Crosshair.player_info.name} | Team: ${Crosshair.player_info.team} `}</h3>
-              </a>
+              <div className={styles.gridBox}>
+            <div className={styles.gridBoxTop}>
+                <h3>{`${Crosshair.player_info.name} | ${Crosshair.player_info.team} `}</h3>
+                <button onClick={() => navigator.clipboard.writeText("Test")}>
+                Copy
+              </button>
+                
+            </div>
+            <div className={styles.square}></div>
+            </div>
             </div>
           ))}
-        </div>
+          </div>
+        
 
         
       </main>
