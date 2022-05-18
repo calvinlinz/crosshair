@@ -9,7 +9,7 @@ const footer = () => {
                 <p>This is a website.</p>
             </div>
             <div className = "footItem">
-                <Link href ="https://github.com/calvinlinz"><a>GitHub</a></Link>
+                <Link href ="https://github.com/calvinlinz/crosshair"><a>Source code</a></Link>
                 <Link href ="https://linkedin.com/in/calvinlinz"><a>LinkedIn</a></Link>
             </div>
       
