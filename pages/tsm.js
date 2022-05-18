@@ -2,6 +2,17 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+
+var data = require("../crosshairs.json");
+
+
+for(var i =0; i < data.length; i++){
+  var obj = data[i];
+  if(obj.player_info.team == "TSM"){
+    console.log(`name:  ${obj.player_info.name}, Team: ${obj.player_info.team}`);
+  }
+}
+
 export default function Home() {
   return (
     <div className="page">

@@ -11,8 +11,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className = {styles.header}>
-            <h1> Create </h1>
+        <div className={styles.header}>
+          <h1> Create </h1>
         </div>
       </main>
 
