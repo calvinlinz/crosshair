@@ -8,7 +8,6 @@
   text-align:center;
 }
 
-
 .gridContainer{
   margin:auto;
   display: flex;
@@ -17,11 +16,10 @@
 }
 
 .gridBox {
-  border: 1px solid black;
   border-radius:2%;
   flex :0 20%;
   margin:10px 10px;
-  box-shadow:0px 0px 3px 1px lightgrey;
+  box-shadow:0px 0px 10px 5px rgb(206, 206, 206);
 }
 .gridBoxTop h3{
   text-align: center;
@@ -64,11 +62,12 @@
 
 @media (max-width: 1200px) {
   .gridContainer {
-    flex-direction:column;
+    flex-direction:row;
     flex-wrap:wrap;
+    justify-content: center;
   }
   .gridContainer .gridBox {
-    width: 40%;
+    min-width: 40%;
   }
 }
   @media (max-width: 720px) {
