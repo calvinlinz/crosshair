@@ -1358,5 +1358,45 @@
                 "lineFiringErrorMultiplier": 1
             }
         }
+    },
+    {
+        "player_info": {
+            "name": "Kadra",
+            "team": "Radiant"
+        },
+        "crosshair": {
+            "primary": {
+                "crosshairColor": "cyan",
+                "outlines": false,
+                "outlineOpacity": 1,
+                "outlineThickness": 1,
+                "centerDot": false,
+                "centerDotOpacity": 1,
+                "centerDotThickness": 3,
+                "overrideFiringErrorOffsetWithCrosshairOffset": false
+            },
+            "inner": {
+                "showLines": true,
+                "lineOpacity": 1,
+                "lineLength": 4,
+                "lineThickness": 2,
+                "lineOffset": 2,
+                "lineMovementError": false,
+                "lineMovementErrorMultiplier": 1,
+                "lineFiringError": false,
+                "lineFiringErrorMultiplier": 1
+            },
+            "outer": {
+                "showLines": false,
+                "lineOpacity": 0,
+                "lineLength": 0,
+                "lineThickness": 0,
+                "lineOffset": 0,
+                "lineMovementError": false,
+                "lineMovementErrorMultiplier": 1,
+                "lineFiringError": false,
+                "lineFiringErrorMultiplier": 1
+            }
+        }
     }
 ]

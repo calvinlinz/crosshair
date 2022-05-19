@@ -12,6 +12,16 @@ export const getStaticProps = async () => {
 }
 
 
+export const copy = (Crosshairs,name) =>{
+  popUp(name);
+  jsonToVal(Crosshairs,name);
+
+}
+export const popUp = (name) => {
+  alert(`Copied ${name}'s crosshair to clipboard`);
+}
+
+
 export default function Home({ Crosshairs }) {
   return (
     <div className="page">
@@ -30,7 +40,7 @@ export default function Home({ Crosshairs }) {
               <div className={styles.gridBox}>
                 <div className={styles.gridBoxTop}>
                   <h3>{`${Crosshair.player_info.name} | ${Crosshair.player_info.team} `}</h3>
-                  <button onClick={() => navigator.clipboard.writeText(jsonToVal(Crosshairs, Crosshair.player_info.name))}>
+                  <button onClick={() => navigator.clipboard.writeText(copy(Crosshairs,Crosshair.player_info.name))}>
                     Copy
                   </button>
                 </div>
