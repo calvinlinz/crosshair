@@ -12,8 +12,8 @@ export const getStaticProps = async () => {
   };
 };
 export const copy = (Crosshairs, name) => {
-  popUp(name);
   jsonToVal(Crosshairs, name);
+  popUp(name);
 };
 export const popUp = (name) => {
   alert(`Copied ${name}'s crosshair to clipboard`);
@@ -56,7 +56,7 @@ export default function Home({ Crosshairs }) {
                   <button
                     onClick={() =>
                       navigator.clipboard.writeText(
-                        copy(Crosshairs, Crosshair.player_info.name)
+                        jsonToVal(Crosshairs, Crosshair.player_info.name)
                       )
                     }
                   >
