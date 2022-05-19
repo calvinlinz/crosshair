@@ -20,7 +20,6 @@ export default function Home() {
         <title>Crosshair</title>
         <meta name="description" content="Cross hair website for Valorant" />
       </Head>
-
       <main className={styles.main}>
         <div className={styles.header}>
           <h1> TSM </h1>

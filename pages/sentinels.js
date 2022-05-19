@@ -4,21 +4,20 @@ import styles from "../styles/Team.module.css";
 
 const data = require("../crosshairs.json");
 
-export const getStaticProps = async() =>{
+export const getStaticProps = async () => {
   return {
-    props: {Crosshairs:data}
+    props: { Crosshairs: data }
   }
 }
 
 
-export default function Home({Crosshairs}) {
+export default function Home({ Crosshairs }) {
   return (
     <div className="page">
       <Head>
         <title>Crosshair</title>
         <meta name="description" content="Cross hair website for Valorant" />
       </Head>
-
       <main className={styles.main}>
         <div className={styles.header}>
           <h1> Sentinels </h1>

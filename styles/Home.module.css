@@ -17,7 +17,6 @@
   .gridBox {
     border-radius:2%;
     width:270px;
-    
     flex :1;
     margin:10px 10px;
     box-shadow:0px 0px 10px 5px rgb(206, 206, 206);
@@ -43,16 +42,18 @@
     margin:17px 10px;
     padding:5px 10px;
     border-radius: 8%;
-    border: 0px;
-    background-color:#5767f5;
+    border: 1px solid #6e7cfc;
+    background-color:#6e7cfc;
   }
   
   .gridBoxTop button:hover{
+    border: 1px solid #4052f7;
     background-color:#4052f7;
     cursor:pointer;
   }
   .gridBoxTop button:active{
-    background-color:#3246fa;
+    border: 1px solid #273cf8;
+    background-color:#273cf8;
   }
   
   .square{
@@ -69,7 +70,7 @@
       justify-content: center;
     }
     .gridContainer .gridBox {
-      min-width: 40%;
+      min-width: 320px;
     }
   }
     @media (max-width: 720px) {
