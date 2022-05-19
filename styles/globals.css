@@ -14,6 +14,12 @@ a{
 .content {
   margin: 0 auto;
 }
+input[type="text"]
+{
+    font-family:'Roboto Condensed';
+    font-size:1rem;
+}
+
 
 nav{
   margin: 0 auto 80px;

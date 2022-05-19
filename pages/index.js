@@ -32,8 +32,8 @@ export default function Home({ Crosshairs }) {
           <h1>Crosshair Website</h1>
           <p>Welcome to my crosshair website for Valorant</p>
 
-          <input
-            placeholder="Search"
+          <input className = "search"
+            placeholder="Search" type="text"
             onChange={(event) => setQuery(event.target.value)}
           />
         </div>

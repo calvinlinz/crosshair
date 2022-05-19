@@ -5,7 +5,9 @@
 .header {
     margin:80px auto 80px;
     text-align:center;
+    font-size:1rem;
 }
+
 
 .gridContainer{
     display: flex;
