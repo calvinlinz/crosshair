@@ -3,14 +3,17 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { jsonToVal } from "../jsonToVal";
 import { useState } from "react";
+import React from 'react';
+import CrosshairCanvas from "../Crosshair/CrosshairCanvas";
 
-const data = require("../crosshairs.json");
 
 export const getStaticProps = async () => {
+  const data = require("../Crosshair/crosshairs.json");
   return {
     props: { Crosshairs: data },
   };
 };
+
 export const copy = (Crosshairs, name) => {
   jsonToVal(Crosshairs, name);
   popUp(name);
@@ -63,7 +66,9 @@ export default function Home({ Crosshairs }) {
                     Copy
                   </button>
                 </div>
-                <div className={styles.square}></div>
+                <div className={styles.square}>
+                  {CrosshairCanvas(Crosshairs, Crosshair.player_info.name)}
+                </div>
               </div>
             </div>
           ))}
