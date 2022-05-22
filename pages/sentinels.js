@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Team.module.css";
 
-const data = require("../crosshairs.json");
+const data = require("../Crosshair/crosshairs.json");
 
 export const getStaticProps = async () => {
   return {
