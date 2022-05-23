@@ -21,7 +21,9 @@ input[type="text"]
 }
 canvas{
   width: 270px;
-  height :200px;
+  height :135px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 
@@ -74,6 +76,6 @@ footer .footerContent .footItem a{
 
 @media (max-width: 1200px) {
   canvas{
-    min-width: 320px;
+    min-width: 100px;
   }
 }
