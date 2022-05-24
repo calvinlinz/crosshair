@@ -1,6 +1,5 @@
 export const jsonToVal = (player) =>{
     const colour = player.crosshair.primary.crosshairColor;
-    window.alert("HELLO");
     const playerVal = "0;P;";
     // colour
     if(colour != "white"){
