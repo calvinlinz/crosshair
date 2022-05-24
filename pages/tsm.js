@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Team.module.css'
 
 
-var data = require("../crosshairs.json");
+var data = require("../Crosshair/crosshairs.json");
 
 
 for(var i =0; i < data.length; i++){

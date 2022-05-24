@@ -606,7 +606,7 @@
         },
         "crosshair": {
             "primary": {
-                "crosshairColor": "Red",
+                "crosshairColor": "red",
                 "outlines": true,
                 "outlineOpacity": 0,
                 "outlineThickness": 1,
@@ -1126,7 +1126,7 @@
         },
         "crosshair": {
             "primary": {
-                "crosshairColor": "Red",
+                "crosshairColor": "red",
                 "outlines": false,
                 "outlineOpacity": 0,
                 "outlineThickness": 1,
@@ -1362,7 +1362,7 @@
     {
         "player_info": {
             "name": "Kadra",
-            "team": "Radiant"
+            "team": "LFT"
         },
         "crosshair": {
             "primary": {

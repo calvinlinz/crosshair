@@ -59,12 +59,16 @@
   }
   
   .square{
-    background-color:rgb(139, 139, 139);
+    background:rgb(139, 139, 139);
     border-bottom-left-radius: 2%;
     border-bottom-right-radius: 2%;
     height:200px;
+    display:flex;
   }
-  
+  .square canvas{
+    margin:auto;
+  }
+
   @media (max-width: 1200px) {
     .gridContainer {
       flex-direction:row;
@@ -74,6 +78,7 @@
     .gridContainer .gridBox {
       min-width: 320px;
     }
+
   }
     @media (max-width: 720px) {
       .gridContainer {
