@@ -39,8 +39,7 @@ export default function CrosshairCanvas (Crosshair){
         if(!canvas){
             return;
         }
-        canvas.width = canvas.offsetWidth;
-	    canvas.height = canvas.offsetHeight;
+
         canvas.imageSmoothingEnabled = false;
 
         const context = canvas.getContext('2d');
