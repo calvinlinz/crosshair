@@ -47,7 +47,7 @@ export default function CrosshairCanvas (Crosshair){
         if(!context){
             return;
         }
-        context.translate(0,0.5);
+        context.translate(0.5,0);
 
         
         const centerX = canvas.width /2;
