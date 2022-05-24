@@ -39,15 +39,18 @@ export default function CrosshairCanvas (Crosshair){
         if(!canvas){
             return;
         }
-        canvas.width = canvas.offsetWidth;
-	    canvas.height = canvas.offsetHeight;
-        canvas.imageSmoothingEnabled = false;
+      
+        canvas.imageSmoothingEnabled = "false";
 
         const context = canvas.getContext('2d');
         if(!context){
             return;
         }
-        context.translate(0.5,0);
+
+        context.translate(0.5,0.5);
+        canvas.width = "135";
+        canvas.height = "135";
+ 
 
         
         const centerX = canvas.width /2;
