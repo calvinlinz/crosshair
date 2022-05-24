@@ -19,6 +19,14 @@ input[type="text"]
     font-family:'Roboto Condensed';
     font-size:1rem;
 }
+canvas{
+  width: 270px;
+  height :135px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  image-rendering: optimizeSpeed;
+
+}
 
 
 nav{
@@ -28,7 +36,6 @@ nav{
   justify-content: flex-start;
   border-bottom: 1px solid #333;
   background-color:#e9e9e9;
-  
 }
 
 nav .navBarHead{
@@ -66,5 +73,11 @@ footer .footerContent .footItem a{
 @media (max-width: 550px) {
   nav .navBarLinks a{
     margin-left:25px;
+  }
+}
+
+@media (max-width: 1200px) {
+  canvas{
+    min-width: 100px;
   }
 }
