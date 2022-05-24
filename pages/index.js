@@ -59,7 +59,7 @@ export default function Home({ Crosshairs }) {
                   </button>
                 </div>
                 <div className={styles.square}>
-                  {CrosshairCanvas(Crosshair, Crosshair.player_info.name)}
+                  <CrosshairCanvas player = {Crosshair}/>
                 </div>
               </div>
             </div>
