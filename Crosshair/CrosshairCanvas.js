@@ -28,7 +28,7 @@ export default function CrosshairCanvas (Crosshair){
             case 'pink':
                 colour="#FF00FF";
                 break;
-            case 'red':
+            case 'Red':
                 colour="FF0000";
                 break;
         }
