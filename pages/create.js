@@ -193,7 +193,7 @@ export default function Home() {
             <div className={styles.section2}>
             Movement Error <input type = "checkbox" name ="showLines" checked = {player.crosshair.inner.lineMovementError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
             Movement Error Multiplier <input type= "range" min="0" max="3" step="0.25" name="lineMovementErrorMultiplier" value={player.crosshair.inner.lineMovementErrorMultiplier} onChange={(event) => onChangeHandlerInner(event)}/><br></br>
-            Firing Error <input type = "checkbox" name ="showLines" checked = {player.crosshair.inner.lineMovementError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
+            Firing Error <input type = "checkbox" name ="showLines" checked = {player.crosshair.inner.lineFiringError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
             Firing Error Multiplier <input type= "range" min="0" max="3" step="0.25" name="lineFiringErrorMultiplier" value={player.crosshair.inner.lineFiringErrorMultiplier} onChange={(event) => onChangeHandlerInner(event)}/>
             </div>
             </div>
