@@ -56,25 +56,8 @@ export default function CrosshairCanvas (Crosshair){
         const centerX = canvas.width /2;
         const centerY = canvas.height /2;
         context.fillStyle = colour;
-        context.lineWidth = Crosshair.player.crosshair.primary.outlineThickness;
-            if(Crosshair.player.crosshair.primary.centerDot && Crosshair.player.crosshair.primary.centerDotOpacity >0){
-                if(Crosshair.player.crosshair.primary.outlines){
-                    context.strokeStyle = "black";
-                    context.globalAlpha = Crosshair.player.crosshair.primary.outlineOpacity;
-                    context.strokeRect(
-                    centerX-.5-Crosshair.player.crosshair.primary.centerDotThickness/2,
-                    centerY-.5-Crosshair.player.crosshair.primary.centerDotThickness/2,
-                    Crosshair.player.crosshair.primary.centerDotThickness+1, 
-                    Crosshair.player.crosshair.primary.centerDotThickness+1);
-                }
-                context.globalAlpha = Crosshair.player.crosshair.primary.centerDotOpacity;
-                context.fillRect(
-                centerX - Crosshair.player.crosshair.primary.centerDotThickness/2,
-                centerY - Crosshair.player.crosshair.primary.centerDotThickness/2, 
-                Crosshair.player.crosshair.primary.centerDotThickness,
-                Crosshair.player.crosshair.primary.centerDotThickness);
-            }
-
+        context.lineWidth = Crosshair.player.crosshair.primary.outlineThickness*2;
+        
         if(Crosshair.player.crosshair.inner.showLines ){
             if(Crosshair.player.crosshair.primary.outlines && Crosshair.player.crosshair.inner.lineThickness !=0 && Crosshair.player.crosshair.inner.lineLength != 0 ){
                 context.globalAlpha = Crosshair.player.crosshair.primary.outlineOpacity;
@@ -135,13 +118,12 @@ export default function CrosshairCanvas (Crosshair){
 
         if(Crosshair.player.crosshair.outer.showLines ){
             if(Crosshair.player.crosshair.primary.outlines && Crosshair.player.crosshair.outer.lineThickness !=0 && Crosshair.player.crosshair.outer.lineLength != 0 ){
-                context.strokeStyle = 'black';
                 context.globalAlpha = Crosshair.player.crosshair.primary.outlineOpacity;
                 context.strokeRect(
-                centerX - Crosshair.player.crosshair.outer.lineOffset - Crosshair.player.crosshair.outer.lineLength,
-                centerY - Crosshair.player.crosshair.outer.lineThickness/2, 
-                Crosshair.player.crosshair.outer.lineLength,
-                Crosshair.player.crosshair.outer.lineThickness);
+                centerX -.5- Crosshair.player.crosshair.outer.lineOffset - Crosshair.player.crosshair.outer.lineLength,
+                centerY -.5- Crosshair.player.crosshair.outer.lineThickness/2, 
+                Crosshair.player.crosshair.outer.lineLength+1,
+                Crosshair.player.crosshair.outer.lineThickness+1);
 
                 context.strokeRect(
                 centerX -.5+ Crosshair.player.crosshair.outer.lineOffset,
@@ -151,7 +133,7 @@ export default function CrosshairCanvas (Crosshair){
 
                 context.strokeRect(
                 centerX -.5- Crosshair.player.crosshair.outer.lineThickness/2,
-                centerY -.5- Crosshair.player.crosshair.outer.lineOffset- Crosshair.player.crosshair.outer.lineLength,
+                centerY -.5 -Crosshair.player.crosshair.outer.lineOffset- Crosshair.player.crosshair.outer.lineLength,
                 Crosshair.player.crosshair.outer.lineThickness+1,
                 Crosshair.player.crosshair.outer.lineLength+1);
 
@@ -188,8 +170,27 @@ export default function CrosshairCanvas (Crosshair){
                 Crosshair.player.crosshair.outer.lineLength);
             }
         }
+
+        if(Crosshair.player.crosshair.primary.centerDot && Crosshair.player.crosshair.primary.centerDotOpacity >0){
+            if(Crosshair.player.crosshair.primary.outlines){
+                context.strokeStyle = "black";
+                context.globalAlpha = Crosshair.player.crosshair.primary.outlineOpacity;
+                context.strokeRect(
+                centerX-.5-Crosshair.player.crosshair.primary.centerDotThickness/2,
+                centerY-.5-Crosshair.player.crosshair.primary.centerDotThickness/2,
+                Crosshair.player.crosshair.primary.centerDotThickness+1, 
+                Crosshair.player.crosshair.primary.centerDotThickness+1);
+            }
+            context.globalAlpha = Crosshair.player.crosshair.primary.centerDotOpacity;
+            context.fillRect(
+            centerX - Crosshair.player.crosshair.primary.centerDotThickness/2,
+            centerY - Crosshair.player.crosshair.primary.centerDotThickness/2, 
+            Crosshair.player.crosshair.primary.centerDotThickness,
+            Crosshair.player.crosshair.primary.centerDotThickness);
+        }
+
     
-    }, [])
+    },[Crosshair])
 
     return <canvas ref = {canvasRef}/> 
 

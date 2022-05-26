@@ -32,7 +32,8 @@
   
   .gridBoxTop{
     background :#f2f2f2;
-    border-radius:5%;
+    border-top-left-radius: 5%;
+    border-top-right-radius:5%;
     flex:0 70%;
     display: flex;
     justify-content:space-between;

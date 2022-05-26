@@ -5,43 +5,47 @@
 .header {
   margin:80px auto 80px;
   text-align:center;
+  font-size:1rem;
 }
 
+
 .gridContainer{
-  margin:auto;
   display: flex;
-  justify-content: space-between;
   align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .gridBox {
   border-radius:2%;
-  width:170px;
-  flex :0 30%;
+  width:270px;
+  flex :1;
   margin:10px 10px;
   box-shadow:0px 0px 10px 5px rgb(206, 206, 206);
+  max-height:200px;
 }
 .gridBoxTop h3{
   text-align: center;
-  vertical-align: text-top;
-  padding:0 10px;
+  vertical-align:text-bottom;
+  padding:10px 10px;
   font-size:1rem;
 }
 
 .gridBoxTop{
   background :#f2f2f2;
-  border-radius:5%;
+  border-top-left-radius: 5%;
+  border-top-right-radius:5%;
+  flex:0 70%;
   display: flex;
   justify-content:space-between;
-  height:50px;
 }
 .gridBoxTop button{
   color:white;
   font-family:"Roboto Condensed";
   font-size:1rem;
-  margin:10px 10px;
+  margin:17px 10px;
   padding:5px 10px;
-  border-radius: 10%;
+  border-radius: 8%;
   border: 1px solid #6e7cfc;
   background-color:#6e7cfc;
 }
@@ -55,12 +59,40 @@
   border: 1px solid #273cf8;
   background-color:#273cf8;
 }
+.customize {
+  width:66%;
+  border-radius: 1%;
+  margin:10px 10px;
+}
+.primary{
+  display:flex;
+}
+.primary .color{
+  height:20px;
+
+} 
+.inner {
+  display:flex;
+}
+.outer {
+  display:flex;
+}
+.section1{
+  margin:0px 10px;
+}
+.section2{
+  margin:0px 10px;
+}
 
 .square{
-  background-color:rgb(139, 139, 139);
+  background:rgb(139, 139, 139);
   border-bottom-left-radius: 2%;
   border-bottom-right-radius: 2%;
   height:200px;
+  display:flex;
+}
+.square canvas{
+  margin:auto;
 }
 
 @media (max-width: 1200px) {
@@ -70,15 +102,17 @@
     justify-content: center;
   }
   .gridContainer .gridBox {
-    min-width: 40%;
+    min-width: 320px;
   }
+  .customize{
+    margin-top:50px;
+  }
+
 }
   @media (max-width: 720px) {
     .gridContainer {
       flex-direction:column;
       flex-wrap:wrap;
     }
-    .gridContainer .gridBox {
-      width: 80%;
-    }
+  
 }
