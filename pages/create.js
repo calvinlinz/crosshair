@@ -199,7 +199,7 @@ export default function Home() {
             <div className ={styles.outer}>
             {/* Outer Lines */}
             <div className={styles.section1}>
-            Show Inner Lines <input type = "checkbox" name ="showLines" checked = {player.crosshair.outer.showLines} onChange = {(event)=> onChangeHandlerOuterChecked(event)}/><br></br>
+            Show Outer Lines <input type = "checkbox" name ="showLines" checked = {player.crosshair.outer.showLines} onChange = {(event)=> onChangeHandlerOuterChecked(event)}/><br></br>
             Outer Line Opacity <input type= "range" min="0" max="1" step="0.25" name="lineOpacity" value={player.crosshair.outer.lineOpacity} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
             Outer Line Length <input type= "range" min="1" max="20" step="1" name="lineLength" value={player.crosshair.outer.lineLength} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
             Outer Line Thickness <input type= "range" min="1" max="10" step="1" name="lineThickness" value={player.crosshair.outer.lineThickness} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
