@@ -14,10 +14,10 @@ export default function CrosshairCanvas (Crosshair){
                 colour ='#00FF00';
                 break;
             case 'yellow green':
-                colour ="75DB01";
+                colour ="#89FF00";
                 break;
             case 'green yellow':
-                colour ="89FF00";
+                colour ="#FFFF00";
                 break;
             case 'yellow':
                 colour="#FFFF00";
