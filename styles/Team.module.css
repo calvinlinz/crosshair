@@ -11,9 +11,8 @@
 
 .gridContainer{
   display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .gridBox {
@@ -23,6 +22,7 @@
   margin:10px 10px;
   box-shadow:0px 0px 10px 5px rgb(206, 206, 206);
   max-height:200px;
+  margin:auto;
 }
 .gridBoxTop h3{
   text-align: center;
@@ -60,21 +60,26 @@
   background-color:#273cf8;
 }
 .customize {
-  width:66%;
+  text-align: center;
   border-radius: 1%;
   margin:10px 10px;
 }
 .primary{
   display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.primary .color{
-  height:20px;
-
-} 
+.create{
+  display:flex;
+  flex-direction: column;
+}
+ 
 .inner {
+  justify-content: center;
   display:flex;
 }
 .outer {
+  justify-content: center;
   display:flex;
 }
 .section1{
@@ -95,17 +100,19 @@
   margin:auto;
 }
 
+.primaryHeader{
+  margin-top:100px
+}
 @media (max-width: 1200px) {
-  .gridContainer {
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content: center;
-  }
+
   .gridContainer .gridBox {
-    min-width: 320px;
+    max-width: 320px;
   }
   .customize{
     margin-top:50px;
+  }
+  .section3{
+    margin:0 10px;
   }
 
 }

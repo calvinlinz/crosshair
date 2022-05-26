@@ -125,10 +125,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.header}>
-          <h1> Create </h1>
-        </div>
-        <div className = {styles.gridContainer}>
+      <div className = {styles.gridContainer}>
               <div className={styles.gridBox}>
                 <div className={styles.gridBoxTop}>
                   <h3>{`Custom Crosshair`}</h3>
@@ -144,9 +141,9 @@ export default function Home() {
                   <CrosshairCanvas player = {player}/>
                 </div>
           </div>
+          
           <div className={styles.customize}>
-          <h2>Primary</h2>
-
+          <h2 className= {styles.primaryHeader}>Primary</h2>
           <div className ={styles.primary}>
           
             <div className={styles.section1}>
@@ -162,7 +159,7 @@ export default function Home() {
             Center Dot Thickness <input type= "range" min="0" max="6" step ="1" name="centerDotThickness" value={player.crosshair.primary.centerDotThickness} onChange={(event) => onChangeHandlerPrimary(event)}/>
             {/* CENTERDOT */}
             </div>
-            <div className={styles.color}>
+            <div className={styles.section3}>
             Override Firing Error Offset With Crosshair Offset <input type = "checkbox" name ="overrideFiringErrorOffsetWithCrosshairOffset" checked = {player.crosshair.primary.overrideFiringErrorOffsetWithCrosshairOffset} onChange = {(event)=> onChangeHandlerPrimaryChecked(event)}/><br></br>
               {/* Color */}
               <br></br>Color: <select name="crosshairColor" value={player.crosshair.primary.crosshairColor} onChange={(event) => onChangeHandlerPrimaryColor(event)}>
@@ -218,6 +215,7 @@ export default function Home() {
             </div>
           </div>
           </div>
+         
       </main>
 
 
