@@ -13,9 +13,6 @@ import createBaseCrosshair from "../Crosshair/createBaseCrosshair";
 export default function Home() {
 
   let [player, setPlayer] = useState(createBaseCrosshair);
-  let [player2, setPlayer2] = useState(createBaseCrosshair);
-
-
 
   const onChangeHandlerPrimaryChecked = (event) => {
     const newValue = event.target.checked;
