@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Team.module.css'
+import styles from '../styles/Create.module.css'
 import { useState } from "react";
 import CrosshairCanvas from "../Crosshair/CrosshairCanvas";
 import { jsonToVal } from "../jsonToVal";
@@ -82,6 +82,7 @@ export default function Home() {
       }
     }
   }));
+  console.log(newValue)
   }
   const onChangeHandlerOuter = (event) => {
     const newValue = parseFloat(event.target.value);
@@ -135,14 +136,13 @@ export default function Home() {
                   </button>
                 </div>
                 <div className={styles.square}>     
-                  <CrosshairCanvas player = {player}/>
+                  <CrosshairCanvas player = {player} className = {styles.xhair}/>
                 </div>
           </div>
           
           <div className={styles.customize}>
           <h2 className= {styles.primaryHeader}>Primary</h2>
           <div className ={styles.primary}>
-          
             <div className={styles.section1}>
             {/* OUTLINES */}
             Outlines <input type = "checkbox" name ="outlines" checked = {player.crosshair.primary.outlines} onChange = {(event)=> onChangeHandlerPrimaryChecked(event)}/><br></br>
@@ -156,6 +156,10 @@ export default function Home() {
             Center Dot Thickness <input type= "range" min="0" max="6" step ="1" name="centerDotThickness" value={player.crosshair.primary.centerDotThickness} onChange={(event) => onChangeHandlerPrimary(event)}/>
             {/* CENTERDOT */}
             </div>
+            </div>
+
+
+            
             <div className={styles.section3}>
             Override Firing Error Offset With Crosshair Offset <input type = "checkbox" name ="overrideFiringErrorOffsetWithCrosshairOffset" checked = {player.crosshair.primary.overrideFiringErrorOffsetWithCrosshairOffset} onChange = {(event)=> onChangeHandlerPrimaryChecked(event)}/><br></br>
               {/* Color */}
@@ -169,7 +173,6 @@ export default function Home() {
               <option value="greenyellow">Green Yellow</option>
               <option value="pink">Pink</option>
             </select>
-            </div>
             </div>
        
 
@@ -185,9 +188,9 @@ export default function Home() {
             </div>
             {/* Inner Lines Movement Error */}
             <div className={styles.section2}>
-            Movement Error <input type = "checkbox" name ="showLines" checked = {player.crosshair.inner.lineMovementError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
+            Movement Error <input type = "checkbox" name ="lineMovementError" checked = {player.crosshair.inner.lineMovementError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
             Movement Error Multiplier <input type= "range" min="0" max="3" step="0.25" name="lineMovementErrorMultiplier" value={player.crosshair.inner.lineMovementErrorMultiplier} onChange={(event) => onChangeHandlerInner(event)}/><br></br>
-            Firing Error <input type = "checkbox" name ="showLines" checked = {player.crosshair.inner.lineFiringError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
+            Firing Error <input type = "checkbox" name ="lineFiringError" checked = {player.crosshair.inner.lineFiringError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
             Firing Error Multiplier <input type= "range" min="0" max="3" step="0.25" name="lineFiringErrorMultiplier" value={player.crosshair.inner.lineFiringErrorMultiplier} onChange={(event) => onChangeHandlerInner(event)}/>
             </div>
             </div>

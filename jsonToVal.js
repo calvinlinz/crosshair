@@ -1,4 +1,5 @@
 export const jsonToVal = (player) =>{
+    
     const colour = player.crosshair.primary.crosshairColor;
     const playerVal = "0;P;";
     // colour

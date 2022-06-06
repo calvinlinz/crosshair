@@ -48,6 +48,7 @@ export default function CrosshairCanvas (Crosshair){
         }
 
         context.translate(0.5,0.5);
+        context.scale(1.5,1.5);
 
         canvas.width = "135";
         canvas.height = "135";

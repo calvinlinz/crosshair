@@ -15,6 +15,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ Crosshairs }) {
+
   const [query, setQuery] = useState("");
   return (
     <div className="page">
@@ -50,7 +51,7 @@ export default function Home({ Crosshairs }) {
                   <h3>{`${Crosshair.player_info.name} | ${Crosshair.player_info.team} `}</h3>
                   <button
                     onClick={() =>
-                      navigator.clipboard.writeText(jsonToVal(Crosshair))
+                      navigator.clipboard.writeText(jsonToVal(Crosshair)) 
                     }
                   >
                     Copy

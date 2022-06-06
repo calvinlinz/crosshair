@@ -18,10 +18,7 @@
 .gridBox {
   border-radius:2%;
   width:270px;
-  flex :1;
-  margin:10px 10px;
   box-shadow:0px 0px 10px 5px rgb(206, 206, 206);
-  max-height:200px;
   margin:auto;
 }
 .gridBoxTop h3{
@@ -88,6 +85,9 @@
 .section2{
   margin:0px 10px;
 }
+.section3{
+  margin:10px 0px;
+}
 
 .square{
   background:rgb(139, 139, 139);
@@ -100,9 +100,7 @@
   margin:auto;
 }
 
-.primaryHeader{
-  margin-top:100px
-}
+
 @media (max-width: 1200px) {
 
   .gridContainer .gridBox {
