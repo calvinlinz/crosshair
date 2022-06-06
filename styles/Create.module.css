@@ -64,7 +64,6 @@
 .primary{
   display:flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 .create{
   display:flex;
@@ -109,9 +108,7 @@
   .customize{
     margin-top:50px;
   }
-  .section3{
-    margin:0 10px;
-  }
+
 
 }
   @media (max-width: 720px) {
