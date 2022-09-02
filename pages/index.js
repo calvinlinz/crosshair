@@ -5,7 +5,8 @@ import { jsonToVal } from "../jsonToVal";
 import { useState } from "react";
 import React from 'react';
 import CrosshairCanvas from "../Crosshair/CrosshairCanvas";
-
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const getStaticProps = async () => {
   const data = require("../Crosshair/crosshairs.json");
@@ -14,8 +15,11 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Home({ Crosshairs }) {
 
+
+
+export default function Home({ Crosshairs }) {
+  const test = () => toast("Wow so easy!");
   const [query, setQuery] = useState("");
   return (
     <div className="page">
@@ -49,13 +53,12 @@ export default function Home({ Crosshairs }) {
               <div className={styles.gridBox}>
                 <div className={styles.gridBoxTop}>
                   <h3>{`${Crosshair.player_info.name} | ${Crosshair.player_info.team} `}</h3>
-                  <button
-                    onClick={() =>
-                      navigator.clipboard.writeText(jsonToVal(Crosshair)) 
-                    }
-                  >
-                    Copy
-                  </button>
+                  <button  onClick={() => {
+                                        navigator.clipboard.writeText(jsonToVal(Crosshair))
+                                        toast(`Copied ${Crosshair.player_info.name}'s crosshair.`,{
+                                          theme: "dark"
+                                        })
+                                    }}>Copy</button>
                 </div>
                 <div className={styles.square}>
                   <CrosshairCanvas player = {Crosshair}/>
@@ -63,8 +66,12 @@ export default function Home({ Crosshairs }) {
               </div>
             </div>
           ))}
+          <ToastContainer
+            toastStyle={{theme: "dark"}}
+          />
         </div>
       </main>
     </div>
   );
+  
 }

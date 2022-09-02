@@ -48,13 +48,13 @@ export const jsonToVal = (player) =>{
     }
 
     //inner lines
-    if(player.crosshair.inner.showLines == true){
-        playerVal+=`0t;${player.crosshair.inner.lineThickness};0l;${player.crosshair.inner.lineLength};0o;${player.crosshair.inner.lineOffset};0a;${player.crosshair.inner.lineOpacity};`
-        if(player.crosshair.inner.lineMovementError){
-            playerVal+=`0m;1;0s;${player.crosshair.inner.lineMovementErrorMultiplier};`
+    if(player.crosshair.primary.inner.showLines == true){
+        playerVal+=`0t;${player.crosshair.primary.inner.lineThickness};0l;${player.crosshair.primary.inner.lineLength};0o;${player.crosshair.primary.inner.lineOffset};0a;${player.crosshair.primary.inner.lineOpacity};`
+        if(player.crosshair.primary.inner.lineMovementError){
+            playerVal+=`0m;1;0s;${player.crosshair.primary.inner.lineMovementErrorMultiplier};`
         }
-        if(player.crosshair.inner.lineFiringError == true){
-            playerVal+=`0e;${player.crosshair.inner.lineFiringErrorMultiplier};`;
+        if(player.crosshair.primary.inner.lineFiringError == true){
+            playerVal+=`0e;${player.crosshair.primary.inner.lineFiringErrorMultiplier};`;
         }else{
             playerVal+=`0f;0;`;
         }
@@ -62,13 +62,13 @@ export const jsonToVal = (player) =>{
         playerVal+=`0b;0;`;
     }
     //outer lines
-    if(player.crosshair.outer.showLines){
-        playerVal+=`1t;${player.crosshair.outer.lineThickness};1l;${player.crosshair.outer.lineLength};1o;${player.crosshair.outer.lineOffset};1a;${player.crosshair.outer.lineOpacity};`
-        if(player.crosshair.outer.lineMovementError){
-            playerVal+=`1m;1;1s;${player.crosshair.outer.lineMovementErrorMultiplier};`
+    if(player.crosshair.primary.outer.showLines){
+        playerVal+=`1t;${player.crosshair.primary.outer.lineThickness};1l;${player.crosshair.primary.outer.lineLength};1o;${player.crosshair.primary.outer.lineOffset};1a;${player.crosshair.primary.outer.lineOpacity};`
+        if(player.crosshair.primary.outer.lineMovementError){
+            playerVal+=`1m;1;1s;${player.crosshair.primary.outer.lineMovementErrorMultiplier};`
         }
-        if(player.crosshair.outer.lineFiringError){
-            playerVal+=`1e;${player.crosshair.outer.lineFiringErrorMultiplier}`;
+        if(player.crosshair.primary.outer.lineFiringError){
+            playerVal+=`1e;${player.crosshair.primary.outer.lineFiringErrorMultiplier}`;
         }else{
             playerVal+=`1f;0`;
         }
