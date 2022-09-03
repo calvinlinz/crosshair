@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { jsonToVal } from "../jsonToVal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from 'react';
 import CrosshairCanvas from "../Crosshair/CrosshairCanvas";
 import {ToastContainer, toast} from 'react-toastify';
@@ -19,8 +19,12 @@ export const getStaticProps = async () => {
 
 
 export default function Home({ Crosshairs }) {
-  const test = () => toast("Wow so easy!");
   const [query, setQuery] = useState("");
+  const [background, setBackground] = useState("");
+
+  function handleChange(event) {
+    setBackground({value: event.target.value});
+  }
   return (
     <div className="page">
       <Head>
@@ -35,7 +39,12 @@ export default function Home({ Crosshairs }) {
           <input className = "search"
             placeholder="Search" type="text"
             onChange={(event) => setQuery(event.target.value)}
-          />
+            />
+          <label>Background</label>
+          <select className = {styles.background} value = {background.value} onChange={handleChange}>
+              <option value = "custom">Custom</option>
+              <option value = "range">Range</option>
+             </select>
         </div>
         <div className={styles.gridContainer}>
           {Crosshairs.filter((Crosshair) => {
@@ -56,7 +65,7 @@ export default function Home({ Crosshairs }) {
                   <button  onClick={() => {
                                         navigator.clipboard.writeText(jsonToVal(Crosshair))
                                         toast(`Copied ${Crosshair.player_info.name}'s crosshair.`,{
-                                          theme: "dark"
+                                          theme: "light"
                                         })
                                     }}>Copy</button>
                 </div>
@@ -67,7 +76,9 @@ export default function Home({ Crosshairs }) {
             </div>
           ))}
           <ToastContainer
-            toastStyle={{theme: "dark"}}
+            toastStyle={{background: "white"}}
+            bodyStyle={{color:"black"}}
+            progressStyle ={{background: "#6e7cfc"}}
           />
         </div>
       </main>
