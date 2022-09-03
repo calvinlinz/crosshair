@@ -62,10 +62,14 @@ export default function Home() {
       ...player,
       crosshair: {              
         ...player.crosshair, 
-        inner: {
-          ...player.crosshair.inner,
-          [event.target.name]:newValue ,  
-      }
+        primary:{
+          ...player.crosshair.primary,
+          inner: {
+            ...inner,
+            [event.target.name]:newValue ,  
+          }
+        }
+       
     }
   }));
   console.log(player);
@@ -76,10 +80,14 @@ export default function Home() {
       ...player,
       crosshair: {              
         ...player.crosshair, 
-        inner : {
-          ...player.crosshair.inner,
-          [event.target.name]: newValue ,  
-      }
+        primary:{
+          ...player.crosshair.primary,
+          inner : {
+            ...inner,
+            [event.target.name]: newValue ,  
+        }
+        }
+        
     }
   }));
   console.log(newValue)
@@ -90,10 +98,14 @@ export default function Home() {
       ...player,
       crosshair: {              
         ...player.crosshair, 
-        outer: {
-          ...player.crosshair.outer,
-          [event.target.name]:newValue ,  
-      }
+        primary: {
+          ...player.crosshair.primary,
+          outer: {
+            ...outer,
+            [event.target.name]:newValue ,  
+        }
+        }
+        
     }
   }));
   console.log(player);
@@ -106,14 +118,20 @@ export default function Home() {
       ...player,
       crosshair: {              
         ...player.crosshair, 
-        outer: {
-          ...player.crosshair.outer,
-          [event.target.name]:newValue ,  
-      }
+        primary:{
+          ...player.crosshair.primary,
+          outer: {
+            ...outer,
+            [event.target.name]:newValue ,  
+        }
+        }
+        
     }
   }));
   }
   
+  let inner = player.crosshair.primary.inner;
+  let outer = player.crosshair.primary.outer;
 
   return (
     <div className="page">
@@ -180,18 +198,18 @@ export default function Home() {
             <div className ={styles.inner}>
             {/* Inner Lines */}
             <div className={styles.section1}>
-            Show Inner Lines <input type = "checkbox" name ="showLines" checked = {player.crosshair.inner.showLines} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
-            Inner Line Opacity <input type= "range" min="0" max="1" step="0.25" name="lineOpacity" value={player.crosshair.inner.lineOpacity} onChange={(event) => onChangeHandlerInner(event)}/><br></br>
-            Inner Line Length <input type= "range" min="1" max="20" step="1" name="lineLength" value={player.crosshair.inner.lineLength} onChange={(event) => onChangeHandlerInner(event)}/><br></br>
-            Inner Line Thickness <input type= "range" min="1" max="10" step="1" name="lineThickness" value={player.crosshair.inner.lineThickness} onChange={(event) => onChangeHandlerInner(event)}/><br></br>
-            Inner Line Offset <input type= "range" min="1" max="20" step="1" name="lineOffset" value={player.crosshair.inner.lineOffset} onChange={(event) => onChangeHandlerInner(event)}/>
+            <label>Show Inner Lines </label><input type = "checkbox" name ="showLines" checked = {inner.showLines} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
+            <label>Inner Line Opacity  </label> <input type= "range" min="0" max="1" step="0.25" name="lineOpacity" value={inner.lineOpacity} onChange={(event) => onChangeHandlerInner(event)}/><br></br>
+            <label>Inner Line Length  </label><input type= "range" min="1" max="20" step="1" name="lineLength" value={inner.lineLength} onChange={(event) => onChangeHandlerInner(event)}/><br></br>
+            <label>Inner Line Thickness  </label><input type= "range" min="1" max="10" step="1" name="lineThickness" value={inner.lineThickness} onChange={(event) => onChangeHandlerInner(event)}/><br></br>
+            <label>Inner Line Offset  </label><input type= "range" min="1" max="20" step="1" name="lineOffset" value={inner.lineOffset} onChange={(event) => onChangeHandlerInner(event)}/>
             </div>
             {/* Inner Lines Movement Error */}
             <div className={styles.section2}>
-            Movement Error <input type = "checkbox" name ="lineMovementError" checked = {player.crosshair.inner.lineMovementError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
-            Movement Error Multiplier <input type= "range" min="0" max="3" step="0.25" name="lineMovementErrorMultiplier" value={player.crosshair.inner.lineMovementErrorMultiplier} onChange={(event) => onChangeHandlerInner(event)}/><br></br>
-            Firing Error <input type = "checkbox" name ="lineFiringError" checked = {player.crosshair.inner.lineFiringError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
-            Firing Error Multiplier <input type= "range" min="0" max="3" step="0.25" name="lineFiringErrorMultiplier" value={player.crosshair.inner.lineFiringErrorMultiplier} onChange={(event) => onChangeHandlerInner(event)}/>
+            <label>Movement Error </label><input type = "checkbox" name ="lineMovementError" checked = {inner.lineMovementError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
+            <label> Movement Error Multiplier</label><input type= "range" min="0" max="3" step="0.25" name="lineMovementErrorMultiplier" value={inner.lineMovementErrorMultiplier} onChange={(event) => onChangeHandlerInner(event)}/><br></br>
+            <label>Firing Error</label> <input type = "checkbox" name ="lineFiringError" checked = {inner.lineFiringError} onChange = {(event)=> onChangeHandlerInnerChecked(event)}/><br></br>
+            <label>Firing Error Multiplier </label><input type= "range" min="0" max="3" step="0.25" name="lineFiringErrorMultiplier" value={inner.lineFiringErrorMultiplier} onChange={(event) => onChangeHandlerInner(event)}/>
             </div>
             </div>
 
@@ -199,18 +217,18 @@ export default function Home() {
             <div className ={styles.outer}>
             {/* Outer Lines */}
             <div className={styles.section1}>
-            Show Outer Lines <input type = "checkbox" name ="showLines" checked = {player.crosshair.outer.showLines} onChange = {(event)=> onChangeHandlerOuterChecked(event)}/><br></br>
-            Outer Line Opacity <input type= "range" min="0" max="1" step="0.25" name="lineOpacity" value={player.crosshair.outer.lineOpacity} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
-            Outer Line Length <input type= "range" min="1" max="20" step="1" name="lineLength" value={player.crosshair.outer.lineLength} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
-            Outer Line Thickness <input type= "range" min="1" max="10" step="1" name="lineThickness" value={player.crosshair.outer.lineThickness} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
-            Outer Line Offset <input type= "range" min="1" max="40" step="1" name="lineOffset" value={player.crosshair.outer.lineOffset} onChange={(event) => onChangeHandlerOuter(event)}/>
+            <label>Show Outer Lines </label> <input type = "checkbox" name ="showLines" checked = {outer.showLines} onChange = {(event)=> onChangeHandlerOuterChecked(event)}/><br></br>
+            <label>Outer Line Opacity</label> <input type= "range" min="0" max="1" step="0.25" name="lineOpacity" value={outer.lineOpacity} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
+            <label>Outer Line Length </label> <input type= "range" min="1" max="20" step="1" name="lineLength" value={outer.lineLength} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
+            <label>Outer Line Thickness </label> <input type= "range" min="1" max="10" step="1" name="lineThickness" value={outer.lineThickness} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
+            <label>Outer Line Offset </label> <input type= "range" min="1" max="40" step="1" name="lineOffset" value={outer.lineOffset} onChange={(event) => onChangeHandlerOuter(event)}/>
             </div>
             {/* Outer Lines Movement Error */}
             <div className={styles.section2}>
-            Movement Error <input type = "checkbox" name ="lineMovementError" checked = {player.crosshair.outer.lineMovementError} onChange = {(event)=> onChangeHandlerOuterChecked(event)}/><br></br>
-            Movement Error Multiplier <input type= "range" min="0" max="3" step="0.25" name="lineMovementErrorMultiplier" value={player.crosshair.outer.lineMovementErrorMultiplier} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
-            Firing Error <input type = "checkbox" name ="lineFiringError" checked = {player.crosshair.outer.lineFiringError} onChange = {(event)=> onChangeHandlerOuterChecked(event)}/><br></br>
-            Firing Error Multiplier <input type= "range" min="0" max="3" step="0.25" name="lineFiringErrorMultiplier" value={player.crosshair.outer.lineFiringErrorMultiplier} onChange={(event) => onChangeHandlerOuter(event)}/>
+            <label>Movement Error </label> <input type = "checkbox" name ="lineMovementError" checked = {outer.lineMovementError} onChange = {(event)=> onChangeHandlerOuterChecked(event)}/><br></br>
+            <label>Movement Error Multiplier </label> <input type= "range" min="0" max="3" step="0.25" name="lineMovementErrorMultiplier" value={outer.lineMovementErrorMultiplier} onChange={(event) => onChangeHandlerOuter(event)}/><br></br>
+            <label>Firing Error </label> <input type = "checkbox" name ="lineFiringError" checked = {outer.lineFiringError} onChange = {(event)=> onChangeHandlerOuterChecked(event)}/><br></br>
+            <label>Firing Error Multiplier </label> <input type= "range" min="0" max="3" step="0.25" name="lineFiringErrorMultiplier" value={outer.lineFiringErrorMultiplier} onChange={(event) => onChangeHandlerOuter(event)}/>
             </div>
             </div>
           </div>
