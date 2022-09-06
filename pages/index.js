@@ -58,7 +58,7 @@ export default function Home({ Crosshairs }) {
       <main className={styles.main}>
         <div className={styles.header}>
           <h1>Crosshair Website</h1>
-          <p>Website is </p>
+          <p>Website is still a work in progress as I develop my skills in web development.<br></br>Ive created this website to learn javaScript from scratch. <br></br>This website contains a JSON file of many pro Valorant players and their respective crosshairs they use in game.<br></br> The data is then used to draw each crosshair and allows users to copy the crosshair and use the code in the game.<br></br>Users are also able to create their own crosshair dynamically.</p>
 
 
       <div className = {styles.selector}>
