@@ -64,11 +64,11 @@ export default function Home({ Crosshairs }) {
             placeholder="Search" type="text"
             onChange={(event) => setQuery(event.target.value)}
             />
-          <label>Background</label>
+          {/* <label>Background</label>
           <select className = {styles.background} value = {background} onChange={handleChange}>
               <option value = "custom">Custom</option>
               <option value = "range.png">Range</option>
-             </select>
+             </select> */}
 
           
           <div className = {styles.teams} >
