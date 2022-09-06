@@ -19,7 +19,6 @@
   .gridBox {
     border-radius:2%;
     width:270px;
-    flex :1;
     margin:10px 10px;
     box-shadow:0px 0px 10px 5px rgb(206, 206, 206);
   }
@@ -73,6 +72,26 @@
     margin:auto;
   }
 
+  .teamSelector{
+    font-family:'Roboto Condensed';
+    font-size:1rem;
+    padding:.5px;
+  }
+
+  .selector{
+    display:flex;
+    justify-content:center;
+  }
+  .selectorTeams{
+    padding:2.5px;
+  }
+  .selectorSearch{
+    padding:2.5px;
+  }
+  .labels{
+    padding:2.5px;
+    font-weight: bold;
+  }
   @media (max-width: 1200px) {
     .gridContainer {
       flex-direction:row;

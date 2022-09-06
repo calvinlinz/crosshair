@@ -58,12 +58,25 @@ export default function Home({ Crosshairs }) {
       <main className={styles.main}>
         <div className={styles.header}>
           <h1>Crosshair Website</h1>
-          <p>Welcome to my crosshair website for Valorant</p>
+          <p>Website is still a work in progress as I develop my skills in web development.<br></br>I've created this website to learn javaScript from scratch. <br></br>This website contains a JSON file of many pro Valorant players and their respective crosshairs they use in game.<br></br> The data is then used to draw each crosshair and allows users to copy the crosshair and use the code in the game.<br></br>Users are also able to create their own crosshair dynamically.</p>
 
+
+      <div className = {styles.selector}>
+          <label className = {styles.labels}>Team</label>
+          <div className = {styles.selectorTeams}>
+            <select className = {styles.teamSelector} name = "teamSelector" value = {currentTeam} placeholder = {currentTeam} onChange={handleTeam}>
+              {teams.map((team)=>{
+                  return <option key = {team} value ={team}> {team}</option>
+                })
+              }
+              </select>
+              </div>
+              <div className = {styles.selectorSearch}>
           <input className = "search"
-            placeholder="Search" type="text"
+            placeholder="Search Player" type="text"
             onChange={(event) => setQuery(event.target.value)}
             />
+            </div>
           {/* <label>Background</label>
           <select className = {styles.background} value = {background} onChange={handleChange}>
               <option value = "custom">Custom</option>
@@ -71,16 +84,9 @@ export default function Home({ Crosshairs }) {
              </select> */}
 
           
-          <div className = {styles.teams} >
-            <label>Team</label>
-            <select name = "teamSelector" value = {currentTeam} placeholder = {currentTeam} onChange={handleTeam}>
-              {teams.map((team)=>{
-                  return <option key = {team} value ={team}> {team}</option>
-                })
-              }
-              </select>
-          </div>
-            
+
+
+        </div>
           
         </div>
    
