@@ -19,9 +19,8 @@ export const getStaticProps = async () => {
 
 export default function Home({ Crosshairs }) {
   const [query, setQuery] = useState("");
-  const [background, setBackground] = useState("");
-  const [currentTeam, setTeam] = useState("");  
-
+  const [background, setBackground] = useState("rgb(139, 139, 132)");
+  const [currentTeam, setTeam] = useState("All");  
 
   const teams = ["All"];
   let count = 1;
@@ -33,13 +32,20 @@ export default function Home({ Crosshairs }) {
   })
 
   function handleTeam(event){
-    setTeam({value:event.target.value});
-    console.log({value:event.target.value})
+    setTeam(event.target.value);
   }
 
   //WIP
   function handleChange(event) {
-    setBackground({value: event.target.value});
+    if(event.target.value === "range.png"){
+      setBackground(event.target.value);
+      event.backgroundColor=null;
+      event.backgroundImage ="/range.png" ;
+    }
+    if(event.target.value === "custom"){
+      setBackground(event.target.value);
+      event.backgroundColor = "grey";
+    }
   }
 
 
@@ -59,15 +65,15 @@ export default function Home({ Crosshairs }) {
             onChange={(event) => setQuery(event.target.value)}
             />
           <label>Background</label>
-          <select className = {styles.background} value = {background.value} onChange={handleChange}>
+          <select className = {styles.background} value = {background} onChange={handleChange}>
               <option value = "custom">Custom</option>
-              <option value = "range">Range</option>
+              <option value = "range.png">Range</option>
              </select>
 
           
           <div className = {styles.teams} >
             <label>Team</label>
-            <select name = "teamSelector" value = {currentTeam.value} placeholder = {currentTeam} onChange={handleTeam}>
+            <select name = "teamSelector" value = {currentTeam} placeholder = {currentTeam} onChange={handleTeam}>
               {teams.map((team)=>{
                   return <option value ={team}> {team}</option>
                 })
@@ -77,18 +83,20 @@ export default function Home({ Crosshairs }) {
             
           
         </div>
+   
+
         <div className={styles.gridContainer}>
           {Crosshairs.filter((Crosshair) => {
-            if(currentTeam.value === "All"){
+            if( currentTeam === "All"){
               if (query === "" ) {
                 return Crosshair;
               } else if (Crosshair.player_info.name.toLowerCase().startsWith(query.toLowerCase())) {
                 return Crosshair;
               }
           }else{
-            if (query === "" && currentTeam.value === Crosshair.player_info.team) {
+            if (query === "" && currentTeam === Crosshair.player_info.team) {
               return Crosshair;
-            } else if (Crosshair.player_info.name.toLowerCase().startsWith(query.toLowerCase()) && currentTeam.value === Crosshair.player_info.team) {
+            } else if (Crosshair.player_info.name.toLowerCase().startsWith(query.toLowerCase()) && currentTeam === Crosshair.player_info.team) {
               return Crosshair;
             }
           }
@@ -103,7 +111,7 @@ export default function Home({ Crosshairs }) {
                     })
                   }}>Copy</button>
                 </div>
-                <div className={styles.square}>
+                <div className={styles.square}  style={{background: background}}>
                   <CrosshairCanvas player = {Crosshair}/>
                 </div>
               </div>
