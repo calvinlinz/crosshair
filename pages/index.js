@@ -75,7 +75,7 @@ export default function Home({ Crosshairs }) {
             <label>Team</label>
             <select name = "teamSelector" value = {currentTeam} placeholder = {currentTeam} onChange={handleTeam}>
               {teams.map((team)=>{
-                  return <option value ={team}> {team}</option>
+                  return <option key = {team} value ={team}> {team}</option>
                 })
               }
               </select>
